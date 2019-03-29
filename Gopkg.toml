@@ -23,16 +23,8 @@
 
 [[constraint]]
   name = "github.com/alexedwards/scs"
-  version = "0.1.1"
+  version = "1.4.0"
 
 [[constraint]]
   name = "github.com/casbin/casbin"
   version = "1.3.0"
-
-[[constraint]]
-  name = "github.com/go-chi/render"
-  version = "1.0.0"
-
-[[constraint]]
-  name = "github.com/pkg/errors"
-  version = "0.8.0"

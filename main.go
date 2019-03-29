@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/alexedwards/scs/session"
 	"haowei.ch/casbin-http-role-example/User"
 	"log"
 	"net/http"
@@ -20,12 +19,10 @@ func main() {
 	log.Print("监听端口 :8080")
 	log.Fatal(http.ListenAndServe(
 		":8080",
-		User.SessionManager(
-			User.Authorizor(
-				User.AuthEnforcer, // casbin 鉴权
-				User.Authorized,   // 授权用户
-			)(mux),
-		),
+		User.SessionManager.Use(User.Authorizor(
+			User.AuthEnforcer, // casbin 鉴权
+			User.Authorized,   // 授权用户
+		)(mux)),
 	))
 
 }
@@ -35,25 +32,29 @@ func main() {
 func loginHandler(users User.Items) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		name := r.PostFormValue("name")
+
+		session := User.SessionManager.Load(r)
+
 		user, err := users.FindByName(name)
 		if err != nil {
 			writeError(http.StatusBadRequest, "WRONG_CREDENTIALS", w, err)
 			return
 		}
 		// 创建 token 值
-		if err := session.RegenerateToken(r); err != nil {
+		if err := session.RenewToken(w); err != nil {
 			writeError(http.StatusInternalServerError, "内部错误", w, err)
 			return
 		}
-		_ = session.PutInt(r, "id", user.ID)
-		_ = session.PutString(r, "role", user.Role)
+		_ = session.PutInt(w, "id", user.ID)
+		_ = session.PutString(w, "role", user.Role)
 		writeSuccess("SUCCESS", w)
 	})
 }
 
 func logoutHandler() http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if err := session.Renew(r); err != nil {
+		session := User.SessionManager.Load(r)
+		if err := session.Destroy(w); err != nil {
 			writeError(http.StatusInternalServerError, "内部错误", w, err)
 			return
 		}
@@ -63,7 +64,8 @@ func logoutHandler() http.HandlerFunc {
 
 func currentMemberHandler() http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		uid, err := session.GetInt(r, "id")
+		session := User.SessionManager.Load(r)
+		uid, err := session.GetInt("id")
 		if err != nil {
 			writeError(http.StatusInternalServerError, "内部错误", w, err)
 			return
@@ -74,7 +76,8 @@ func currentMemberHandler() http.HandlerFunc {
 
 func memberRoleHandler() http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		role, err := session.GetString(r, "role")
+		session := User.SessionManager.Load(r)
+		role, err := session.GetString("role")
 		if err != nil {
 			writeError(http.StatusInternalServerError, "内部错误", w, err)
 			return

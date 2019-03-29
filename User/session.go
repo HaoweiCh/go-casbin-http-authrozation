@@ -1,17 +1,17 @@
 package User
 
 import (
-	"github.com/alexedwards/scs/engine/memstore"
-	"github.com/alexedwards/scs/session"
+	"github.com/alexedwards/scs"
 	"time"
 )
 
 var (
 	// 创建会话存储
-	SessionManager = session.Manage(
-		memstore.New(30*time.Minute),        // 30 分钟自动清理失效数据
-		session.IdleTimeout(30*time.Minute), // 空闲失效时间，超过指定时间无操作 token 失效
-		session.Persist(true),               // 持久化
-		session.Secure(true),                // 加密
-	)
+	SessionManager = scs.NewCookieManager("u46IpCV9y5Vlur8YvODJEhgOY8m9JVE4")
 )
+
+func init() {
+	SessionManager.Lifetime(time.Hour) // Set the maximum session lifetime to 1 hour.
+	SessionManager.Persist(true)       // Persist the session after a user has closed their browser.
+	SessionManager.Secure(true)        // Set the Secure flag on the session cookie.
+}

@@ -2,7 +2,6 @@ package User
 
 import (
 	"errors"
-	"github.com/alexedwards/scs/session"
 	"github.com/casbin/casbin"
 	"log"
 	"net/http"
@@ -12,7 +11,8 @@ import (
 func Authorizor(e *casbin.Enforcer, users Items) func(next http.Handler) http.Handler {
 	return func(next http.Handler) http.Handler {
 		fn := func(w http.ResponseWriter, r *http.Request) {
-			role, err := session.GetString(r, "role")
+			session := SessionManager.Load(r)
+			role, err := session.GetString("role")
 			if err != nil {
 				writeError(http.StatusInternalServerError, "内部错误", w, err)
 				return
@@ -23,7 +23,7 @@ func Authorizor(e *casbin.Enforcer, users Items) func(next http.Handler) http.Ha
 			// if it's a member, check if the user still exists
 
 			if role == "member" {
-				uid, err := session.GetInt(r, "id")
+				uid, err := session.GetInt("id")
 				if err != nil {
 					writeError(http.StatusInternalServerError, "内部错误", w, err)
 					return

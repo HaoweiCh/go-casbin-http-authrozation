@@ -4,7 +4,8 @@
 
 * [casbin](https://github.com/casbin/casbin) for role-based HTTP Authorization
 * [scs](https://github.com/alexedwards/scs)  for session handling.
-
+* redis 会话 token 存储
+* mariadb 用户和规则存储
 
 Run with
 

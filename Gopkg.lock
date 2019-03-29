@@ -10,15 +10,15 @@
   version = "v3.0.0"
 
 [[projects]]
-  digest = "1:24fa3cc5fa057002902604a83a2d3df3041dc379399c75c52d559dd088d92f63"
+  digest = "1:df46f9b68ac3859495975256d82d46a9eecaf53ed909629d15711289a4ba73bd"
   name = "github.com/alexedwards/scs"
   packages = [
-    "engine/memstore",
-    "session",
+    ".",
+    "stores/cookiestore",
   ]
   pruneopts = ""
-  revision = "0fdd3ef0cedf798548a2a904932bc0b4e13ee91b"
-  version = "v0.1.1"
+  revision = "cac921d76a577e6c80f3f6bc0857b8eeb650669e"
+  version = "v1.4.0"
 
 [[projects]]
   digest = "1:bc953ea95c2d3148803476a6ceff7af2bba475634baed12cf8d910e45ef463b0"
@@ -37,19 +37,34 @@
   version = "v1.3.0"
 
 [[projects]]
-  digest = "1:4c0404dc03d974acd5fcd8b8d3ce687b13bd169db032b89275e8b9d77b98ce8c"
-  name = "github.com/patrickmn/go-cache"
-  packages = ["."]
+  branch = "master"
+  digest = "1:36ef1d8645934b1744cc7d8726e00d3dd9d8d84c18617bf7367a3a6d532f3370"
+  name = "golang.org/x/crypto"
+  packages = [
+    "internal/subtle",
+    "nacl/secretbox",
+    "poly1305",
+    "salsa20/salsa",
+  ]
   pruneopts = ""
-  revision = "a3647f8e31d79543b2d0f0ae2fe5c379d72cedc0"
-  version = "v2.1.0"
+  revision = "a5d413f7728c81fb97d96a2b722368945f651e78"
+
+[[projects]]
+  branch = "master"
+  digest = "1:1b0de777d8ddd63356d5a4d76799ea8f47e811aa9dda85ddc72b2a061c799cc9"
+  name = "golang.org/x/sys"
+  packages = [
+    "cpu",
+    "unix",
+  ]
+  pruneopts = ""
+  revision = "9eb1bfa1ce65ae8a6ff3114b0aaf9a41a6cf3560"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
-    "github.com/alexedwards/scs/engine/memstore",
-    "github.com/alexedwards/scs/session",
+    "github.com/alexedwards/scs",
     "github.com/casbin/casbin",
   ]
   solver-name = "gps-cdcl"
