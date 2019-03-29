@@ -9,21 +9,21 @@ name=Admin
 ### 当前用户
 GET http://127.0.0.1:8080/member/current
 Accept: application/json
-Cookie: scs.session.token=tks1pHOyPK-IK3YggzUIuF9vGLt2VR3BT6gJYEEhm9I;
+Cookie: session=Tp8csoHhynXDuLTMo_GuHuujww394iVAMauFRIugf-M;
 
 ### 当前用户角色
 GET http://127.0.0.1:8080/member/role
 Accept: application/json
-Cookie: scs.session.token=tks1pHOyPK-IK3YggzUIuF9vGLt2VR3BT6gJYEEhm9I;
+Cookie: session=Tp8csoHhynXDuLTMo_GuHuujww394iVAMauFRIugf-M;
 
 ### 管理员用户才可以访问的页面
 GET http://127.0.0.1:8080/admin/stuff
 Accept: application/json
-Cookie: scs.session.token=tks1pHOyPK-IK3YggzUIuF9vGLt2VR3BT6gJYEEhm9I;
+Cookie: session=Tp8csoHhynXDuLTMo_GuHuujww394iVAMauFRIugf-M;
 
 ### 登出
 POST http://127.0.0.1:8080/logout
 Content-Type: application/x-www-form-urlencoded
-Cookie: scs.session.token=tks1pHOyPK-IK3YggzUIuF9vGLt2VR3BT6gJYEEhm9I;
+Cookie: session=Tp8csoHhynXDuLTMo_GuHuujww394iVAMauFRIugf-M;
 
 ###

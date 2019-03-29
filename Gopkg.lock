@@ -37,6 +37,17 @@
   version = "v1.3.0"
 
 [[projects]]
+  digest = "1:dcf8316121302735c0ac84e05f4686e3b34e284444435e9a206da48d8be18cb1"
+  name = "github.com/gomodule/redigo"
+  packages = [
+    "internal",
+    "redis",
+  ]
+  pruneopts = ""
+  revision = "9c11da706d9b7902c6da69c592f75637793fe121"
+  version = "v2.0.0"
+
+[[projects]]
   branch = "master"
   digest = "1:36ef1d8645934b1744cc7d8726e00d3dd9d8d84c18617bf7367a3a6d532f3370"
   name = "golang.org/x/crypto"
@@ -66,6 +77,7 @@
   input-imports = [
     "github.com/alexedwards/scs",
     "github.com/casbin/casbin",
+    "github.com/gomodule/redigo/redis",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
