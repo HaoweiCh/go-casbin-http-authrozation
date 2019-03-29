@@ -15,26 +15,46 @@
   packages = [
     ".",
     "stores/cookiestore",
+    "stores/redisstore",
   ]
   pruneopts = ""
   revision = "cac921d76a577e6c80f3f6bc0857b8eeb650669e"
   version = "v1.4.0"
 
 [[projects]]
-  digest = "1:bc953ea95c2d3148803476a6ceff7af2bba475634baed12cf8d910e45ef463b0"
+  digest = "1:b2d99cf934823ababa483fef8d3e3ea8d63281c041bf756cb6f2deb99732f689"
   name = "github.com/casbin/casbin"
   packages = [
     ".",
     "config",
-    "file-adapter",
+    "effect",
+    "log",
     "model",
     "persist",
+    "persist/file-adapter",
     "rbac",
+    "rbac/default-role-manager",
     "util",
   ]
   pruneopts = ""
-  revision = "9566491e9fe1898000031bba3e2b354dd633904a"
-  version = "v1.3.0"
+  revision = "4aa316fb68d44d4cc5ddd98d7e9ec80bc0a8b081"
+  version = "v1.8.1"
+
+[[projects]]
+  branch = "master"
+  digest = "1:0ccadd90395979006cd7daf0a36d131eb4e58c8e614dcfabe5c551a01714a9f3"
+  name = "github.com/casbin/gorm-adapter"
+  packages = ["."]
+  pruneopts = ""
+  revision = "e74a050c51a4c12323e72f0c7ab445fb2daf6b40"
+
+[[projects]]
+  digest = "1:e692d16fdfbddb94e9e4886aaf6c08bdbae5cb4ac80651445de9181b371c6e46"
+  name = "github.com/go-sql-driver/mysql"
+  packages = ["."]
+  pruneopts = ""
+  revision = "72cd26f257d44c1114970e19afddcd812016007e"
+  version = "v1.4.1"
 
 [[projects]]
   digest = "1:dcf8316121302735c0ac84e05f4686e3b34e284444435e9a206da48d8be18cb1"
@@ -46,6 +66,33 @@
   pruneopts = ""
   revision = "9c11da706d9b7902c6da69c592f75637793fe121"
   version = "v2.0.0"
+
+[[projects]]
+  digest = "1:7d4958827c8f2d9d31e24d9a3a52194eb179f77d854692e57954c516ecf76748"
+  name = "github.com/jinzhu/gorm"
+  packages = ["."]
+  pruneopts = ""
+  revision = "472c70caa40267cb89fd8facb07fe6454b578626"
+  version = "v1.9.2"
+
+[[projects]]
+  branch = "master"
+  digest = "1:d9a7385b84d8187fd94e0357045c6fa1147ca94caa56fdd539336c7c102fc728"
+  name = "github.com/jinzhu/inflection"
+  packages = ["."]
+  pruneopts = ""
+  revision = "04140366298a54a039076d798123ffa108fff46c"
+
+[[projects]]
+  digest = "1:29145d7af4adafd72a79df5e41456ac9e232d5a28c1cd4dacf3ff008a217fc10"
+  name = "github.com/lib/pq"
+  packages = [
+    ".",
+    "oid",
+  ]
+  pruneopts = ""
+  revision = "4ded0e9383f75c197b3a2aaa6d590ac52df6fd79"
+  version = "v1.0.0"
 
 [[projects]]
   branch = "master"
@@ -71,12 +118,23 @@
   pruneopts = ""
   revision = "9eb1bfa1ce65ae8a6ff3114b0aaf9a41a6cf3560"
 
+[[projects]]
+  digest = "1:0a6cbf5be24f00105d33c9f6d2f40b8149e0316537a92be1b0d4c761b7ae39fb"
+  name = "google.golang.org/appengine"
+  packages = ["cloudsql"]
+  pruneopts = ""
+  revision = "54a98f90d1c46b7731eb8fb305d2a321c30ef610"
+  version = "v1.5.0"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
     "github.com/alexedwards/scs",
+    "github.com/alexedwards/scs/stores/redisstore",
     "github.com/casbin/casbin",
+    "github.com/casbin/gorm-adapter",
+    "github.com/go-sql-driver/mysql",
     "github.com/gomodule/redigo/redis",
   ]
   solver-name = "gps-cdcl"
