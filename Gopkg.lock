@@ -2,32 +2,55 @@
 
 
 [[projects]]
+  digest = "1:8ec1618fc3ee146af104d6c13be250f25e5976e34557d4afbfe4b28035ce6c05"
   name = "github.com/Knetic/govaluate"
   packages = ["."]
+  pruneopts = ""
   revision = "d216395917cc49052c7c7094cf57f09657ca08a8"
   version = "v3.0.0"
 
 [[projects]]
+  digest = "1:24fa3cc5fa057002902604a83a2d3df3041dc379399c75c52d559dd088d92f63"
   name = "github.com/alexedwards/scs"
-  packages = ["engine/memstore","session"]
+  packages = [
+    "engine/memstore",
+    "session",
+  ]
+  pruneopts = ""
   revision = "0fdd3ef0cedf798548a2a904932bc0b4e13ee91b"
   version = "v0.1.1"
 
 [[projects]]
+  digest = "1:bc953ea95c2d3148803476a6ceff7af2bba475634baed12cf8d910e45ef463b0"
   name = "github.com/casbin/casbin"
-  packages = [".","config","file-adapter","model","persist","rbac","util"]
+  packages = [
+    ".",
+    "config",
+    "file-adapter",
+    "model",
+    "persist",
+    "rbac",
+    "util",
+  ]
+  pruneopts = ""
   revision = "9566491e9fe1898000031bba3e2b354dd633904a"
   version = "v1.3.0"
 
 [[projects]]
+  digest = "1:4c0404dc03d974acd5fcd8b8d3ce687b13bd169db032b89275e8b9d77b98ce8c"
   name = "github.com/patrickmn/go-cache"
   packages = ["."]
+  pruneopts = ""
   revision = "a3647f8e31d79543b2d0f0ae2fe5c379d72cedc0"
   version = "v2.1.0"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "f43a2728630887923eac9e3666f80c2b0befda9a7bcc27b7ea74cc74ecf623bc"
+  input-imports = [
+    "github.com/alexedwards/scs/engine/memstore",
+    "github.com/alexedwards/scs/session",
+    "github.com/casbin/casbin",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1

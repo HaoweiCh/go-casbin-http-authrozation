@@ -1,0 +1,289 @@
+GET http://127.0.0.1:8080/admin/stuff
+Accept: application/json
+Cookie: scs.session.token=tks1pHOyPK-IK3YggzUIuF9vGLt2VR3BT6gJYEEhm9I;
+
+<> 2019-03-29T095545.200.txt
+
+###
+
+GET http://127.0.0.1:8080/member/role
+Accept: application/json
+Cookie: scs.session.token=tks1pHOyPK-IK3YggzUIuF9vGLt2VR3BT6gJYEEhm9I;
+
+<> 2019-03-29T095542.200.txt
+
+###
+
+GET http://127.0.0.1:8080/member/current
+Accept: application/json
+Cookie: scs.session.token=tks1pHOyPK-IK3YggzUIuF9vGLt2VR3BT6gJYEEhm9I;
+
+<> 2019-03-29T095539.200.txt
+
+###
+
+POST http://127.0.0.1:8080/login
+Content-Type: application/x-www-form-urlencoded
+
+name=Admin
+
+<> 2019-03-29T095526.200.txt
+
+###
+
+GET http://127.0.0.1:8080/member/current
+Accept: application/json
+Cookie: scs.session.token=iGuOlGCMAJIl-2VfAbQWXFGCr7Nw56V63yj_prw1r7k;
+
+<> 2019-03-29T095514.403.txt
+
+###
+
+GET http://127.0.0.1:8080/member/current
+Accept: application/json
+Cookie: scs.session.token=iGuOlGCMAJIl-2VfAbQWXFGCr7Nw56V63yj_prw1r7k;
+
+<> 2019-03-29T095352.200.txt
+
+###
+
+POST http://127.0.0.1:8080/login
+Content-Type: application/x-www-form-urlencoded
+
+name=Admin
+
+<> 2019-03-29T095333.200.txt
+
+###
+
+GET http://127.0.0.1:8080/member/current
+Accept: application/json
+Cookie: scs.session.token=ycRXzu40eG-xP7hW5fGMW6Iw3GC1NwXwZALQARzC__g;
+
+<> 2019-03-29T094751.403.txt
+
+###
+
+GET http://127.0.0.1:8080/member/current
+Accept: application/json
+Cookie: scs.session.token=ycRXzu40eG-xP7hW5fGMW6Iw3GC1NwXwZALQARzC__g;
+
+<> 2019-03-29T094108.403.txt
+
+###
+
+POST http://127.0.0.1:8080/logout
+Content-Type: application/x-www-form-urlencoded
+Cookie: scs.session.token=ycRXzu40eG-xP7hW5fGMW6Iw3GC1NwXwZALQARzC__g;
+
+<> 2019-03-29T094105.200.txt
+
+###
+
+GET http://127.0.0.1:8080/admin/stuff
+Accept: application/json
+Cookie: scs.session.token=ycRXzu40eG-xP7hW5fGMW6Iw3GC1NwXwZALQARzC__g;
+
+<> 2019-03-29T094102.200.txt
+
+###
+
+GET http://127.0.0.1:8080/member/role
+Accept: application/json
+Cookie: scs.session.token=ycRXzu40eG-xP7hW5fGMW6Iw3GC1NwXwZALQARzC__g;
+
+<> 2019-03-29T094059.200.txt
+
+###
+
+GET http://127.0.0.1:8080/member/current
+Accept: application/json
+Cookie: scs.session.token=ycRXzu40eG-xP7hW5fGMW6Iw3GC1NwXwZALQARzC__g;
+
+<> 2019-03-29T094055.200.txt
+
+###
+
+GET http://127.0.0.1:8080/member/current
+Accept: application/json
+Cookie: scs.session.token=6xgzLfBrzH-42jfE2pNq61kxA7CQu7dtcVVOrp0-u60;
+
+<> 2019-03-29T094039.403.txt
+
+###
+
+POST http://127.0.0.1:8080/login
+Content-Type: application/x-www-form-urlencoded
+
+name=Admin
+
+<> 2019-03-29T094023.200.txt
+
+###
+
+GET http://127.0.0.1:8080/admin/stuff
+Accept: application/json
+Cookie: scs.session.token=6xgzLfBrzH-42jfE2pNq61kxA7CQu7dtcVVOrp0-u60;
+
+<> 2019-03-29T092404.403.txt
+
+###
+
+GET http://127.0.0.1:8080/admin/stuff
+Accept: application/json
+Cookie: scs.session.token=6xgzLfBrzH-42jfE2pNq61kxA7CQu7dtcVVOrp0-u60;
+
+<> 2019-03-28T035325.200.txt
+
+###
+
+GET http://127.0.0.1:8080/admin/stuff
+Accept: application/json
+Cookie: scs.session.token=CaRgk_6T-PB0PdUhJz0Vo5TFZkaGdma8dHTAs23bWvI;
+
+<> 2019-03-28T035317.403.txt
+
+###
+
+POST http://127.0.0.1:8080/login
+Content-Type: application/x-www-form-urlencoded
+
+name=Admin
+
+<> 2019-03-28T035304.200.txt
+
+###
+
+POST http://127.0.0.1:8080/login
+Content-Type: application/x-www-form-urlencoded
+
+name=Admin
+
+<> 2019-03-28T035301.200.txt
+
+###
+
+GET http://127.0.0.1:8080/admin/stuff
+Accept: application/json
+Cookie: scs.session.token=CaRgk_6T-PB0PdUhJz0Vo5TFZkaGdma8dHTAs23bWvI;
+
+<> 2019-03-28T035206.403.txt
+
+###
+
+GET http://127.0.0.1:8080/member/role
+Accept: application/json
+Cookie: scs.session.token=CaRgk_6T-PB0PdUhJz0Vo5TFZkaGdma8dHTAs23bWvI;
+
+<> 2019-03-28T035152.200.txt
+
+###
+
+GET http://127.0.0.1:8080/member/stuff
+Accept: application/json
+Cookie: scs.session.token=CaRgk_6T-PB0PdUhJz0Vo5TFZkaGdma8dHTAs23bWvI;
+
+<> 2019-03-28T035146.404.txt
+
+###
+
+GET http://127.0.0.1:8080/member/stuff
+Accept: application/json
+Cookie: scs.session.token=CaRgk_6T-PB0PdUhJz0Vo5TFZkaGdma8dHTAs23bWvI;
+
+<> 2019-03-28T035121.404.txt
+
+###
+
+GET http://127.0.0.1:8080/member/role
+Accept: application/json
+Cookie: scs.session.token=CaRgk_6T-PB0PdUhJz0Vo5TFZkaGdma8dHTAs23bWvI;
+
+<> 2019-03-28T035118.200.txt
+
+###
+
+GET http://127.0.0.1:8080/member/current
+Accept: application/json
+Cookie: scs.session.token=CaRgk_6T-PB0PdUhJz0Vo5TFZkaGdma8dHTAs23bWvI;
+
+<> 2019-03-28T035114.200.txt
+
+###
+
+POST http://127.0.0.1:8080/login
+Content-Type: application/x-www-form-urlencoded
+
+name=Sepp
+
+<> 2019-03-28T035057.200.txt
+
+###
+
+GET http://127.0.0.1:8080/member/stuff
+Accept: application/json
+
+<> 2019-03-28T035046.403.txt
+
+###
+
+POST http://127.0.0.1:8080/logout
+Content-Type: application/x-www-form-urlencoded
+Cookie: scs.session.token=QQidUHKDVCuHdx-i3Pra6tcyybt-G3DPTDazLr1IKNg;
+
+<> 2019-03-28T034908.403.txt
+
+###
+
+POST http://127.0.0.1:8080/logout
+Content-Type: application/x-www-form-urlencoded
+Cookie: scs.session.token=QQidUHKDVCuHdx-i3Pra6tcyybt-G3DPTDazLr1IKNg;
+
+<> 2019-03-28T034907.403.txt
+
+###
+
+POST http://127.0.0.1:8080/logout
+Content-Type: application/x-www-form-urlencoded
+Cookie: scs.session.token=QQidUHKDVCuHdx-i3Pra6tcyybt-G3DPTDazLr1IKNg;
+
+<> 2019-03-28T034854.200.txt
+
+###
+
+POST http://127.0.0.1:8080/login
+Content-Type: application/x-www-form-urlencoded
+Cookie: scs.session.token=QQidUHKDVCuHdx-i3Pra6tcyybt-G3DPTDazLr1IKNg;
+
+<> 2019-03-28T034841.403.txt
+
+###
+
+POST http://127.0.0.1:8080/login
+Content-Type: application/x-www-form-urlencoded
+Cookie: scs.session.token=QQidUHKDVCuHdx-i3Pra6tcyybt-G3DPTDazLr1IKNg; Path=/; Expires=Thu, 28 Mar 2019 08:16:24 GMT; Max-Age=1800; HttpOnly; Secure
+
+name=Sepp
+
+<> 2019-03-28T034828.403.txt
+
+###
+
+POST http://127.0.0.1:8080/login
+Content-Type: application/x-www-form-urlencoded
+
+name=Sepp
+
+<> 2019-03-28T034624.200.txt
+
+###
+
+POST http://127.0.0.1:8080/login
+Content-Type: application/x-www-form-urlencoded
+
+id=999&value=content
+
+<> 2019-03-28T034603.400.txt
+
+###
+
