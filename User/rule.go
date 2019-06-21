@@ -32,7 +32,7 @@ func init() {
 		casbin.NewModel(CasbinModel),
 		gormadapter.NewAdapter(
 			"mysql",
-			"root:123321000@tcp(127.0.0.1:3306)/",
+			"root:123321@tcp(127.0.0.1:3306)/",
 		),
 	); err != nil {
 		panic(err)

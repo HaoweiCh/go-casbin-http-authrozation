@@ -2,15 +2,25 @@
 
 简单且实用的 HTTP 鉴权体系
 
+更新历史
+
+* 2019.6.21 
+  * 更新 http 接口文件
+  * 使用Go Module  做包管理工具
+    * 推荐 Module Proxy   https://goproxy.io
+
+依赖包
+
 * [casbin](https://github.com/casbin/casbin) for role-based HTTP Authorization
 * [scs](https://github.com/alexedwards/scs)  for session handling.
 * redis 会话 token 存储
-* mariadb 用户和规则存储
+* mariadb 用户和规则存储 
+  * 记得修改 rule.go 里面的sql 服务器帐号密码
+
 
 Run with
 
 ```bash
-dep ensure
 go run main.go
 ```
 

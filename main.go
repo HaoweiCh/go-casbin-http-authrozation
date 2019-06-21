@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"haowei.ch/casbin-http-role-example/User"
+	"go-casbin-http-authrozation/User"
 	"log"
 	"net/http"
 )
@@ -16,9 +16,9 @@ func main() {
 	mux.HandleFunc("/member/role", memberRoleHandler())
 	mux.HandleFunc("/admin/stuff", adminHandler())
 
-	log.Print("监听端口 :8080")
+	log.Print("监听端口 :8081")
 	log.Fatal(http.ListenAndServe(
-		":8080",
+		":8081",
 		User.SessionManager.Use(User.Authorizor(
 			User.AuthEnforcer, // casbin 鉴权
 			User.Authorized,   // 授权用户

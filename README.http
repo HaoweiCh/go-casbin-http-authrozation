@@ -1,29 +1,57 @@
 ### 登陆用户
-POST http://127.0.0.1:8080/login
+POST {{HOST}}/login
 Content-Type: application/x-www-form-urlencoded
 
 name=Admin
-#name=Sabine
-#name=Sepp
+
+> {%
+client.assert(response.status === 200, "Response status is not 200");
+client.global.set("SESSION_ID", response.headers.valuesOf("Set-Cookie")[0]);
+client.log( client.global.get("SESSION_ID"));
+%}
+
+### 登陆用户
+POST {{HOST}}/login
+Content-Type: application/x-www-form-urlencoded
+
+name=Sabine
+
+> {%
+client.assert(response.status === 200, "Response status is not 200");
+client.global.set("SESSION_ID", response.headers.valuesOf("Set-Cookie")[0]);
+client.log( client.global.get("SESSION_ID"));
+%}
+
+### 登陆用户
+POST {{HOST}}/login
+Content-Type: application/x-www-form-urlencoded
+
+name=Sepp
+
+> {%
+client.assert(response.status === 200, "Response status is not 200");
+client.global.set("SESSION_ID", response.headers.valuesOf("Set-Cookie")[0]);
+client.log( client.global.get("SESSION_ID"));
+%}
 
 ### 当前用户
-GET http://127.0.0.1:8080/member/current
+GET {{HOST}}/member/current
 Accept: application/json
-Cookie: session=Tp8csoHhynXDuLTMo_GuHuujww394iVAMauFRIugf-M;
+Cookie: {{SESSION_ID}}
 
 ### 当前用户角色
-GET http://127.0.0.1:8080/member/role
+GET {{HOST}}/member/role
 Accept: application/json
-Cookie: session=Tp8csoHhynXDuLTMo_GuHuujww394iVAMauFRIugf-M;
+Cookie: {{SESSION_ID}}
 
 ### 管理员用户才可以访问的页面
-GET http://127.0.0.1:8080/admin/stuff
+GET {{HOST}}/admin/stuff
 Accept: application/json
-Cookie: session=Tp8csoHhynXDuLTMo_GuHuujww394iVAMauFRIugf-M;
+Cookie: {{SESSION_ID}}
 
 ### 登出
-POST http://127.0.0.1:8080/logout
+POST {{HOST}}/logout
 Content-Type: application/x-www-form-urlencoded
-Cookie: session=Tp8csoHhynXDuLTMo_GuHuujww394iVAMauFRIugf-M;
+Cookie: {{SESSION_ID}}
 
 ###
