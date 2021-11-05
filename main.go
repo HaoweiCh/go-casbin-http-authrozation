@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"go-casbin-http-authrozation/User"
 	"log"
 	"net/http"
+
+	"go-casbin-http-authrozation/User"
 )
 
 func main() {
@@ -19,7 +20,7 @@ func main() {
 	log.Print("监听端口 :8081")
 	log.Fatal(http.ListenAndServe(
 		":8081",
-		User.SessionManager.Use(User.Authorizor(
+		User.SessionManager.Use(User.Authorizer(
 			User.AuthEnforcer, // casbin 鉴权
 			User.Authorized,   // 授权用户
 		)(mux)),

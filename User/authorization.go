@@ -2,13 +2,14 @@ package User
 
 import (
 	"errors"
-	"github.com/casbin/casbin"
 	"log"
 	"net/http"
+
+	"github.com/casbin/casbin"
 )
 
-// 认证中间件
-func Authorizor(e *casbin.Enforcer, users Items) func(next http.Handler) http.Handler {
+//Authorizer 认证中间件
+func Authorizer(e *casbin.Enforcer, users Items) func(next http.Handler) http.Handler {
 	return func(next http.Handler) http.Handler {
 		fn := func(w http.ResponseWriter, r *http.Request) {
 			session := SessionManager.Load(r)

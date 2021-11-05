@@ -4,12 +4,16 @@
 
 更新历史
 
+* 2021-11-05T11:11:48+0800
+  * 升级依赖
+  * 升级 go 版本
+  * casbin 规则独立成文件, (通过 embed 特性编译时嵌入)
 * 2019.6.21 
   * 更新 http 接口文件
   * 使用Go Module  做包管理工具
     * 推荐 Module Proxy   https://goproxy.io
 
-依赖包
+## 依赖
 
 * [casbin](https://github.com/casbin/casbin) for role-based HTTP Authorization
 * [scs](https://github.com/alexedwards/scs)  for session handling.
@@ -18,7 +22,7 @@
   * 记得修改 rule.go 里面的sql 服务器帐号密码
 
 
-Run with
+## Run with
 
 ```bash
 go run main.go

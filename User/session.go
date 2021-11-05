@@ -1,10 +1,11 @@
 package User
 
 import (
+	"time"
+
 	"github.com/alexedwards/scs"
 	"github.com/alexedwards/scs/stores/redisstore"
 	"github.com/gomodule/redigo/redis"
-	"time"
 )
 
 var (
